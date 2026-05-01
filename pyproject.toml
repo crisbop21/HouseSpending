@@ -1,0 +1,19 @@
+[project]
+name = "couple-expense-tracker"
+version = "0.0.1"
+description = "Two user expense tracker for shared and individual finances across SGD and USD cards"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = [".venv", "build", "dist"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-q"
